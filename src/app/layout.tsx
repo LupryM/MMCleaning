@@ -1,22 +1,17 @@
 import type { Metadata } from "next";
-import { Merriweather, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-
-const merriweather = Merriweather({
-  variable: "--font-merriweather",
-  subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-});
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
   title: "MM Cleaners | Professional House Cleaning in Centurion",
-  description: "Reliable maid and house cleaning services in Centurion. Book your cleaning today!",
+  description:
+    "Reliable maid and house cleaning services in Centurion. Fast, friendly, and 100% guaranteed. Book your cleaning today!",
 };
 
 export default function RootLayout({
@@ -27,9 +22,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${merriweather.variable} ${poppins.variable} h-full antialiased`}
+      className={`${poppins.variable} h-full antialiased bg-background`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-background text-foreground">
+        {children}
+      </body>
     </html>
   );
 }
