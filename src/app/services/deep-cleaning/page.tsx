@@ -147,8 +147,8 @@ export default function DeepCleaningPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["Move-in cleaning", "/services/move-in-cleaning", "Start fresh in a home that is ready for you.", "/Service Images/Move in cleaning.jpg"],
-              ["Move-out cleaning", "/services/move-out-cleaning", "Leave your space looking its absolute best.", "/Service Images/post construction cleaning.avif"],
+              ["Move-in/out cleaning", "/services/move-in-move-out-cleaning", "Start fresh in a home that is ready for you.", "/Service Images/Move in cleaning.jpg"],
+              ["Post-construction", "/services/post-construction-cleaning", "Thorough cleaning after building or renovation work.", "/Service Images/post construction cleaning.avif"],
               ["Apartment cleaning", "/services/apartment-cleaning", "Reliable cleaning tailored to apartment living.", "/Service Images/apartment clean.jpg"],
               ["Commercial cleaning", "/services/commercial-cleaning", "A clean, professional space for your team and customers.", "/Service Images/Office Cleaning.jpg"],
             ].map(([title, href, description, image]) => (

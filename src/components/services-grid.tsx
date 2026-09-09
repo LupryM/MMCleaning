@@ -9,10 +9,11 @@ export default function ServicesGrid({ showViewAllButton = false }: ServicesGrid
   const services = [
     { title: "Commercial Cleaning", href: "/services/commercial-cleaning" },
     { title: "Deep Cleaning", href: "/services/deep-cleaning" },
-    { title: "Move-out Cleaning", href: "/services/move-out-cleaning" },
-    { title: "Move-in Cleaning", href: "/services/move-in-cleaning" },
+    { title: "Move In/Out Cleaning", href: "/services/move-in-move-out-cleaning" },
     { title: "Apartment Cleaning", href: "/services/apartment-cleaning" },
     { title: "Post Construction Cleaning", href: "/services/post-construction-cleaning" },
+    { title: "Upholstery Cleaning", href: "/services/upholstery-cleaning" },
+    { title: "Carpet Cleaning", href: "/services/carpet-cleaning" },
   ];
 
   return (

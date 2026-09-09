@@ -23,6 +23,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${poppins.variable} h-full antialiased bg-background`}
+      suppressHydrationWarning
     >
       <head>
         <link

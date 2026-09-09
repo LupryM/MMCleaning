@@ -89,6 +89,8 @@ export default function Hero() {
                   <option value="move-in-out">Move In/Out Cleaning</option>
                   <option value="apartment-cleaning">Apartment Cleaning</option>
                   <option value="post-construction">Post Construction Cleaning</option>
+                  <option value="upholstery-cleaning">Upholstery Cleaning</option>
+                  <option value="carpet-cleaning">Carpet Cleaning</option>
                 </select>
                 <button
                   type="submit"
