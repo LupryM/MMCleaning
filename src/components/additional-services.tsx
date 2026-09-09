@@ -9,9 +9,9 @@ export default function AdditionalServices() {
 
   return (
     <section className="bg-background py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="inline-flex bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="inline-flex bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-none">
             Extras
           </span>
           <h2 className="mt-5 font-heading font-extrabold text-3xl md:text-4xl tracking-tight">
@@ -23,7 +23,7 @@ export default function AdditionalServices() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group bg-cream rounded-3xl overflow-hidden border border-border hover:shadow-lg transition"
+              className="group bg-cream rounded-none overflow-hidden border border-border hover:shadow-lg transition"
             >
               <div className="relative h-44 overflow-hidden">
                 <Image
@@ -39,7 +39,7 @@ export default function AdditionalServices() {
                 <h3 className="text-base font-bold font-heading">
                   {service.title}
                 </h3>
-                <span className="flex items-center justify-center w-8 h-8 rounded-full bg-lime text-lime-foreground text-sm shrink-0 transition-transform group-hover:translate-x-0.5">
+                <span className="flex items-center justify-center w-8 h-8 rounded-none bg-lime text-lime-foreground text-sm shrink-0 transition-transform group-hover:translate-x-0.5">
                   →
                 </span>
               </div>

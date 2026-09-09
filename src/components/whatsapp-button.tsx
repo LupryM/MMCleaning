@@ -1,15 +1,14 @@
 export default function WhatsappButton() {
   return (
-    <a 
-      href="https://wa.me/27783928061" 
-      target="_blank" 
+    <a
+      href="https://wa.me/27783928061"
+      target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition z-50 flex items-center justify-center transform hover:scale-110"
+      className="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white flex items-center justify-center hover:bg-[#128C7E] hover:scale-110 transition-all z-50 shadow-lg rounded-full"
       aria-label="Contact on WhatsApp"
     >
-      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.031 0C5.383 0 0 5.383 0 12.031c0 2.646.852 5.109 2.316 7.15L.392 24l5.006-1.921A11.944 11.944 0 0012.031 24c6.648 0 12.031-5.383 12.031-12.031S18.679 0 12.031 0zm0 21.996c-2.227 0-4.412-.587-6.319-1.696l-.454-.268-3.722 1.428 1.455-3.626-.294-.469C1.503 15.352.83 13.064.83 10.741c0-5.836 4.747-10.582 10.582-10.582 5.836 0 10.582 4.747 10.582 10.582 0 5.836-4.747 10.582-10.582 10.582zm5.787-7.915c-.318-.16-1.881-.928-2.172-1.034-.291-.106-.503-.16-.715.16-.211.318-.82 1.034-1.006 1.246-.185.212-.371.239-.689.079-2.091-1.047-3.411-1.928-4.757-4.237-.132-.224-.014-.346.145-.504.143-.142.318-.372.477-.558.16-.186.212-.318.318-.53.106-.212.053-.398-.026-.558-.079-.16-.715-1.722-.979-2.359-.258-.621-.52-.537-.715-.547-.185-.009-.397-.009-.609-.009s-.556.08-.847.398c-.291.318-1.111 1.087-1.111 2.65 0 1.564 1.138 3.075 1.296 3.287.16.212 2.239 3.418 5.426 4.793 1.95 0.843 2.7.946 3.65.792.793-.128 2.435-.994 2.779-1.954.344-.96.344-1.784.239-1.954-.106-.17-.371-.277-.689-.437z"/>
-      </svg>
+      <i className="fa-brands fa-whatsapp text-3xl"></i>
     </a>
   );
 }
+

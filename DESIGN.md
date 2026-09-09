@@ -1,7 +1,7 @@
 # MM Cleaners — Design System
 
 A restyle of the MM Cleaners home page to match the **BeClean** aesthetic:
-punchy lime-green + black, big rounded geometric type, pill buttons, sparkle
+punchy lime-green + black, big sharp geometric type, square buttons, sparkle
 brand marks, and soft organic off-white backdrops.
 
 ---
@@ -21,12 +21,12 @@ Exactly 5 core colors. Defined as design tokens in `src/app/globals.css`.
 | Token                     | Hex        | Usage                                                        |
 | ------------------------- | ---------- | ------------------------------------------------------------ |
 | `--color-background`      | `#FFFFFF`  | Page background                                              |
-| `--color-foreground`      | `#101010`  | Primary text, dark sections (footer / banner), black pills   |
-| `--color-lime` (accent)   | `#CBE94A`  | Badges, primary CTAs, numbers, sparkles, icon chips          |
+| `--color-foreground`      | `#030303`  | Primary text, dark sections (footer / banner), black pills   |
+| `--color-lime` (accent)   | `#e6f632`  | Badges, primary CTAs, numbers, sparkles, icon chips          |
 | `--color-cream`           | `#F4F4F1`  | Organic section blobs / alternating section backgrounds      |
 | `--color-muted-foreground`| `#6F6F6F`  | Body / secondary paragraph text                              |
 
-Supporting: `--color-lime-foreground: #101010` (text on lime), card surfaces are
+Supporting: `--color-lime-foreground: #030303` (text on lime), card surfaces are
 pure white with a hairline `#ECECEC` border.
 
 Rules:
@@ -41,7 +41,7 @@ Rules:
 Two weights of one family for cohesion and identity.
 
 - **Headings:** `Poppins` — weights 600 / 700 / 800. Tight tracking
-  (`tracking-tight`), heavy, rounded-geometric. Large display sizes
+  (`tracking-tight`), heavy, sharp-geometric. Large display sizes
   (`text-5xl`–`text-7xl`) for the hero.
 - **Body:** `Poppins` — weights 400 / 500. `leading-relaxed` (1.5–1.6).
 - Small uppercase labels/badges: 500–600 weight, `tracking-wide`, `text-xs`.
@@ -62,13 +62,13 @@ Next.js `next/font/google` in `layout.tsx`.
 
 ## 5. Shape language
 
-- **Buttons:** `rounded-full` pills. Two variants:
+- **Buttons:** sharp squares (`rounded-none`). Two variants:
   - **Primary/black:** black bg, white text, trailing arrow.
   - **Accent/lime:** lime bg, black text.
-- **Badges:** tiny lime pills, uppercase, `rounded-full`, black text.
-- **Cards:** `rounded-2xl` / `rounded-3xl`, hairline border, subtle shadow.
-- **Blobs:** large `rounded-[3rem]`/`rounded-full` cream shapes behind content.
-- **Icon chips:** lime rounded squares/circles holding a stroked icon.
+- **Badges:** tiny lime squares, uppercase, `rounded-none`, black text.
+- **Cards:** `rounded-none`, hairline border, subtle shadow.
+- **Blobs:** large sharp rectangular cream shapes behind content.
+- **Icon chips:** lime sharp squares holding a stroked icon.
 
 ---
 

@@ -1,19 +1,25 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function ServicesGrid() {
+interface ServicesGridProps {
+  showViewAllButton?: boolean;
+}
+
+export default function ServicesGrid({ showViewAllButton = false }: ServicesGridProps) {
   const services = [
     { title: "Commercial Cleaning" },
     { title: "Deep Cleaning" },
     { title: "Move-out Cleaning" },
     { title: "Move-in Cleaning" },
     { title: "Apartment Cleaning" },
+    { title: "Post Construction Cleaning" },
   ];
 
   return (
     <section id="services" className="bg-cream py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-flex bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <span className="inline-flex bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-none">
             Services
           </span>
           <h2 className="mt-5 font-heading font-extrabold text-3xl md:text-4xl tracking-tight text-balance">
@@ -29,7 +35,7 @@ export default function ServicesGrid() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group bg-card rounded-3xl overflow-hidden border border-border hover:shadow-lg transition"
+              className="group bg-card rounded-none overflow-hidden border border-border hover:shadow-lg transition"
             >
               <div className="relative h-52 overflow-hidden">
                 <Image
@@ -45,13 +51,25 @@ export default function ServicesGrid() {
                 <h3 className="text-lg font-bold font-heading">
                   {service.title}
                 </h3>
-                <span className="flex items-center justify-center w-9 h-9 rounded-full bg-lime text-lime-foreground text-sm shrink-0 transition-transform group-hover:translate-x-0.5">
+                <span className="flex items-center justify-center w-9 h-9 rounded-none bg-lime text-lime-foreground text-sm shrink-0 transition-transform group-hover:translate-x-0.5">
                   →
                 </span>
               </div>
             </div>
           ))}
         </div>
+
+        {showViewAllButton && (
+          <div className="mt-14 flex justify-center">
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center bg-lime text-lime-foreground font-semibold px-8 py-4 text-lg transition hover:bg-lime/90 hover:scale-105 duration-300"
+            >
+              View All Services
+              <span className="ml-3 text-xl leading-none">→</span>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

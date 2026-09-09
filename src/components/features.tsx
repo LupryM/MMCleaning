@@ -55,9 +55,9 @@ export default function Features() {
 
   return (
     <section className="bg-background py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-flex bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="text-center max-w-3xl mx-auto mb-14">
+          <span className="inline-flex bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-none">
             Why us
           </span>
           <h2 className="mt-5 font-heading font-extrabold text-3xl md:text-4xl tracking-tight text-balance">
@@ -69,18 +69,18 @@ export default function Features() {
           {features.map((feature, idx) => (
             <div
               key={feature.title}
-              className="group relative bg-card rounded-3xl p-8 border border-border hover:border-foreground/15 hover:shadow-lg transition"
+              className="group relative bg-card rounded-none p-8 border border-border hover:border-foreground/15 hover:shadow-lg transition"
             >
               <span className="absolute top-6 right-7 font-heading font-extrabold text-2xl text-lime">
                 {`0${idx + 1}`}
               </span>
-              <div className="w-14 h-14 rounded-2xl bg-lime flex items-center justify-center mb-6">
+              <div className="mb-6">
                 <svg
-                  className="w-7 h-7 text-lime-foreground"
+                  className="w-12 h-12 text-lime group-hover:scale-110 transition-transform duration-300"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  strokeWidth={1.75}
+                  strokeWidth={2.5}
                 >
                   {featureIcons[idx]}
                 </svg>

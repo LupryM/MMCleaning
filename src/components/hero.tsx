@@ -5,20 +5,20 @@ import Sparkle from "./sparkle";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-background">
-      {/* organic cream backdrop */}
+      {/* sharp geometric cream backdrop */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-32 -left-40 w-[46rem] h-[46rem] rounded-full bg-cream"
+        className="pointer-events-none absolute -top-32 -left-40 w-[46rem] h-[46rem] bg-cream rotate-12 transform"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-24 right-0 w-[38rem] h-[38rem] rounded-full bg-cream/70"
+        className="pointer-events-none absolute top-24 right-0 w-[38rem] h-[38rem] bg-cream/70 -rotate-6 transform"
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div className="relative max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            <span className="inline-flex items-center gap-2 bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-full">
+            <span className="inline-flex items-center gap-2 bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-none">
               Welcome — Centurion&apos;s cleaners
             </span>
 
@@ -31,48 +31,11 @@ export default function Hero() {
               in Centurion
             </h1>
 
-            <p className="mt-6 text-lg text-muted-foreground max-w-md leading-relaxed">
+            <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
               We specialize in house cleaning services in Centurion and
               surrounding areas, dedicated to giving you fast, friendly, and
               reliable service.
             </p>
-
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <a
-                href="#services"
-                className="group inline-flex items-center gap-2 bg-foreground text-background pl-6 pr-4 py-3.5 rounded-full font-semibold hover:bg-foreground/90 transition"
-              >
-                Our services
-                <span className="flex items-center justify-center w-6 h-6 rounded-full bg-lime text-lime-foreground text-xs transition-transform group-hover:translate-x-0.5">
-                  →
-                </span>
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center bg-lime text-lime-foreground px-7 py-3.5 rounded-full font-semibold hover:brightness-95 transition"
-              >
-                Contact us
-              </a>
-            </div>
-
-            <div className="mt-10 flex items-center gap-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              <span className="flex items-center justify-center w-9 h-9 rounded-full bg-lime text-lime-foreground">
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                  />
-                </svg>
-              </span>
-              Scroll down
-            </div>
           </div>
 
           {/* Quote form */}
@@ -80,7 +43,7 @@ export default function Hero() {
             <Sparkle
               className="hidden lg:block absolute -top-8 -left-6 w-10 h-10 text-lime"
             />
-            <div className="relative bg-card rounded-3xl shadow-xl border border-border overflow-hidden">
+            <div className="relative bg-card rounded-none shadow-xl border border-border overflow-hidden">
               <div className="bg-foreground px-7 py-6">
                 <h2 className="text-background text-2xl font-extrabold font-heading">
                   Request a quote
@@ -94,30 +57,30 @@ export default function Hero() {
                   <input
                     type="text"
                     placeholder="First name *"
-                    className="w-full px-4 py-3 bg-cream border border-border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent"
+                    className="w-full px-4 py-3 bg-cream border border-border rounded-none text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent"
                     required
                   />
                   <input
                     type="text"
                     placeholder="Last name *"
-                    className="w-full px-4 py-3 bg-cream border border-border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent"
+                    className="w-full px-4 py-3 bg-cream border border-border rounded-none text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent"
                     required
                   />
                 </div>
                 <input
                   type="email"
                   placeholder="Email *"
-                  className="w-full px-4 py-3 bg-cream border border-border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent"
+                  className="w-full px-4 py-3 bg-cream border border-border rounded-none text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent"
                   required
                 />
                 <input
                   type="tel"
                   placeholder="Phone *"
-                  className="w-full px-4 py-3 bg-cream border border-border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent"
+                  className="w-full px-4 py-3 bg-cream border border-border rounded-none text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent"
                   required
                 />
                 <select
-                  className="w-full px-4 py-3 bg-cream border border-border rounded-full text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent"
+                  className="w-full px-4 py-3 bg-cream border border-border rounded-none text-sm text-muted-foreground focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent"
                   defaultValue=""
                 >
                   <option value="">What service do you need?</option>
@@ -125,10 +88,11 @@ export default function Hero() {
                   <option value="deep-cleaning">Deep Cleaning</option>
                   <option value="move-in-out">Move In/Out Cleaning</option>
                   <option value="apartment-cleaning">Apartment Cleaning</option>
+                  <option value="post-construction">Post Construction Cleaning</option>
                 </select>
                 <button
                   type="submit"
-                  className="group w-full inline-flex items-center justify-center gap-2 bg-lime text-lime-foreground font-bold py-4 rounded-full hover:brightness-95 transition mt-2"
+                  className="group w-full inline-flex items-center justify-center gap-2 bg-lime text-lime-foreground font-bold py-4 rounded-none hover:brightness-95 transition mt-2"
                 >
                   Request a quote
                   <span className="transition-transform group-hover:translate-x-0.5">

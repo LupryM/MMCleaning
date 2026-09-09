@@ -1,12 +1,11 @@
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
-import Features from "@/components/features";
 import TrustReviews from "@/components/trust-reviews";
 import PartnerBanner from "@/components/partner-banner";
-import Introduction from "@/components/introduction";
 import ServicesGrid from "@/components/services-grid";
-import AdditionalServices from "@/components/additional-services";
+import Introduction from "@/components/introduction";
 import Footer from "@/components/footer";
+import LocationsSection from "@/components/locations-section";
 import WhatsappButton from "@/components/whatsapp-button";
 
 export default function Home() {
@@ -14,12 +13,11 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <Features />
+      <ServicesGrid showViewAllButton={true} />
       <TrustReviews />
       <PartnerBanner />
       <Introduction />
-      <ServicesGrid />
-      <AdditionalServices />
+      <LocationsSection />
       <Footer />
       <WhatsappButton />
     </main>

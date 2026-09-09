@@ -2,10 +2,10 @@
 
 @theme {
   --color-background: #ffffff;
-  --color-foreground: #101010;
+  --color-foreground: #030303;
 
-  --color-lime: #cbe94a;
-  --color-lime-foreground: #101010;
+  --color-lime: #e6f632;
+  --color-lime-foreground: #030303;
 
   --color-cream: #f4f4f1;
   --color-muted-foreground: #6f6f6f;
@@ -13,7 +13,7 @@
   --color-card: #ffffff;
   --color-border: #ececec;
 
-  --color-dark: #101010;
+  --color-dark: #030303;
 
   --font-heading: var(--font-poppins);
   --font-sans: var(--font-poppins);
