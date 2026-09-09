@@ -147,14 +147,19 @@ export default function DeepCleaningPage() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              ["Move-in cleaning", "/services/move-in-cleaning", "Start fresh in a home that is ready for you."],
-              ["Move-out cleaning", "/services/move-out-cleaning", "Leave your space looking its absolute best."],
-              ["Apartment cleaning", "/services/apartment-cleaning", "Reliable cleaning tailored to apartment living."],
-              ["Commercial cleaning", "/services/commercial-cleaning", "A clean, professional space for your team and customers."],
-            ].map(([title, href, description]) => (
-              <Link key={title} href={href} className="group flex min-h-48 flex-col justify-between border border-border bg-background p-6 transition hover:-translate-y-1 hover:border-lime hover:shadow-lg">
-                <div><h3 className="text-xl font-extrabold">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p></div>
-                <span className="mt-8 flex items-center justify-between border-t border-border pt-4 text-sm font-bold">Explore service <span className="text-xl text-lime transition group-hover:translate-x-1">→</span></span>
+              ["Move-in cleaning", "/services/move-in-cleaning", "Start fresh in a home that is ready for you.", "/Service Images/Move in cleaning.jpg"],
+              ["Move-out cleaning", "/services/move-out-cleaning", "Leave your space looking its absolute best.", "/Service Images/post construction cleaning.avif"],
+              ["Apartment cleaning", "/services/apartment-cleaning", "Reliable cleaning tailored to apartment living.", "/Service Images/apartment clean.jpg"],
+              ["Commercial cleaning", "/services/commercial-cleaning", "A clean, professional space for your team and customers.", "/Service Images/Office Cleaning.jpg"],
+            ].map(([title, href, description, image]) => (
+              <Link key={title} href={href} className="group overflow-hidden border border-border bg-background transition hover:-translate-y-1 hover:border-lime hover:shadow-lg">
+                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                  <Image src={image} alt="" fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
+                </div>
+                <div className="flex min-h-48 flex-col justify-between p-6">
+                  <div><h3 className="text-xl font-extrabold">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p></div>
+                  <span className="mt-8 flex items-center justify-between border-t border-border pt-4 text-sm font-bold">Explore service <span className="text-xl text-lime transition group-hover:translate-x-1">→</span></span>
+                </div>
               </Link>
             ))}
           </div>
