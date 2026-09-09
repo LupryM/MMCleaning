@@ -94,7 +94,7 @@ const locations = [
 
 export default function LocationsSection() {
   return (
-    <section className="bg-cream py-20 px-4 sm:px-8 lg:px-12">
+    <section id="areas" className="bg-cream py-20 px-4 sm:px-8 lg:px-12">
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <div className="mb-12">
