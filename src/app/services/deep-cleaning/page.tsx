@@ -14,25 +14,21 @@ export const metadata: Metadata = {
 
 const rooms = [
   {
-    number: "01",
     title: "Kitchen",
     description: "Degreasing and detailing for the places where everyday mess builds up.",
     items: ["Cabinets and cupboard fronts", "Appliances and splashbacks", "Sinks, taps and counters", "Floors and skirting boards"],
   },
   {
-    number: "02",
     title: "Bathrooms",
     description: "A hygienic reset that leaves every surface bright, clean and fresh.",
     items: ["Showers, baths and basins", "Toilets and fittings", "Tiles and grout", "Mirrors, floors and fixtures"],
   },
   {
-    number: "03",
     title: "Bedrooms",
     description: "Careful cleaning for a calmer, more comfortable place to rest.",
     items: ["Dusting and wiping surfaces", "Doors, frames and handles", "Skirting boards", "Floors and hard-to-reach areas"],
   },
   {
-    number: "04",
     title: "Living areas",
     description: "The finishing touch for shared spaces, entertaining areas and hallways.",
     items: ["Furniture and surfaces", "Windowsills and ledges", "Light fittings and fans", "Floors, corners and edges"],
@@ -94,7 +90,7 @@ export default function DeepCleaningPage() {
 
       <section className="border-b border-border bg-background">
         <div className="mx-auto grid max-w-[1600px] gap-6 px-4 py-7 sm:grid-cols-3 sm:px-8 lg:grid-cols-3 lg:px-12">
-          {[['01', 'Detailed, not rushed', 'We focus on the overlooked areas that make the biggest difference.'], ['02', 'Built around your home', 'Choose the rooms and priorities that matter most to you.'], ['03', 'Local and dependable', 'Proudly serving Centurion with care you can count on.']].map(([number, title, text]) => <div key={number} className="flex gap-4 border-l-2 border-lime pl-4"><span className="font-mono text-sm text-muted-foreground">{number}</span><div><h2 className="font-bold">{title}</h2><p className="mt-1 text-sm leading-6 text-muted-foreground">{text}</p></div></div>)}
+          {[['Detailed, not rushed', 'We focus on the overlooked areas that make the biggest difference.'], ['Built around your home', 'Choose the rooms and priorities that matter most to you.'], ['Local and dependable', 'Proudly serving Centurion with care you can count on.']].map(([title, text]) => <div key={title} className="border-l-2 border-lime pl-4"><h2 className="font-bold">{title}</h2><p className="mt-1 text-sm leading-6 text-muted-foreground">{text}</p></div>)}
         </div>
       </section>
 
@@ -108,7 +104,29 @@ export default function DeepCleaningPage() {
       <section className="bg-cream" id="included">
         <div className="mx-auto max-w-[1600px] px-4 py-20 sm:px-8 lg:px-12 lg:py-28">
           <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end"><div><p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">What we cover</p><h2 className="mt-3 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">Every room, <span className="text-lime">properly done.</span></h2></div><p className="max-w-sm text-sm leading-6 text-muted-foreground">Our checklist is detailed, but your priorities come first. Tell us what needs extra attention when you request your quote.</p></div>
-          <div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">{rooms.map((room) => <article key={room.number} className="bg-background p-7 sm:p-8"><span className="font-mono text-sm text-muted-foreground">{room.number}</span><h3 className="mt-12 text-2xl font-extrabold">{room.title}</h3><p className="mt-3 min-h-14 text-sm leading-6 text-muted-foreground">{room.description}</p><ul className="mt-6 space-y-3 border-t border-border pt-5 text-sm">{room.items.map((item) => <li key={item} className="flex gap-2"><span className="text-lime">✓</span>{item}</li>)}</ul></article>)}</div>
+          <div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">{rooms.map((room) => <article key={room.title} className="bg-background p-7 sm:p-8"><h3 className="text-2xl font-extrabold">{room.title}</h3><p className="mt-3 min-h-14 text-sm leading-6 text-muted-foreground">{room.description}</p><ul className="mt-6 space-y-3 border-t border-border pt-5 text-sm">{room.items.map((item) => <li key={item} className="flex gap-2"><span className="text-lime">✓</span>{item}</li>)}</ul></article>)}</div>
+        </div>
+      </section>
+
+      <section className="bg-cream" aria-labelledby="gallery-heading">
+        <div className="mx-auto max-w-[1600px] px-4 py-20 sm:px-8 lg:px-12 lg:py-28">
+          <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">The MM Cleaners finish</p>
+              <h2 id="gallery-heading" className="mt-3 max-w-2xl text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">A closer look at <span className="text-lime">properly clean.</span></h2>
+            </div>
+            <p className="max-w-sm text-sm leading-6 text-muted-foreground">Thoughtful detail, fresh surfaces and a finish you can see the moment you walk in.</p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
+            <div className="relative min-h-[360px] overflow-hidden bg-dark md:min-h-[520px]">
+              <Image src="/Service Images/Deep-Cleaning-Company.jpg" alt="MM Cleaners team completing a deep clean" fill className="object-cover transition duration-500 hover:scale-105" sizes="(max-width: 768px) 100vw, 60vw" />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-dark/70 to-transparent p-6 pt-20 text-background sm:p-8 sm:pt-24"><p className="text-sm font-semibold text-background/75">Detail from top to bottom</p><p className="mt-1 text-2xl font-extrabold">Fresh feels good.</p></div>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
+              <div className="relative min-h-[220px] overflow-hidden bg-dark sm:min-h-[250px]"><Image src="/Service Images/apartment clean.jpg" alt="Freshly cleaned apartment interior" fill className="object-cover transition duration-500 hover:scale-105" sizes="(max-width: 768px) 50vw, 40vw" /></div>
+              <div className="relative min-h-[220px] overflow-hidden bg-dark sm:min-h-[250px]"><Image src="/Service Images/Move in cleaning.jpg" alt="Professional move-in cleaning service" fill className="object-cover transition duration-500 hover:scale-105" sizes="(max-width: 768px) 50vw, 40vw" /></div>
+            </div>
+          </div>
         </div>
       </section>
 
