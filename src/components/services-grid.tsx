@@ -7,12 +7,12 @@ interface ServicesGridProps {
 
 export default function ServicesGrid({ showViewAllButton = false }: ServicesGridProps) {
   const services = [
-    { title: "Commercial Cleaning" },
-    { title: "Deep Cleaning" },
-    { title: "Move-out Cleaning" },
-    { title: "Move-in Cleaning" },
-    { title: "Apartment Cleaning" },
-    { title: "Post Construction Cleaning" },
+    { title: "Commercial Cleaning", href: "/services/commercial-cleaning" },
+    { title: "Deep Cleaning", href: "/services/deep-cleaning" },
+    { title: "Move-out Cleaning", href: "/services/move-out-cleaning" },
+    { title: "Move-in Cleaning", href: "/services/move-in-cleaning" },
+    { title: "Apartment Cleaning", href: "/services/apartment-cleaning" },
+    { title: "Post Construction Cleaning", href: "/services/post-construction-cleaning" },
   ];
 
   return (
@@ -33,9 +33,10 @@ export default function ServicesGrid({ showViewAllButton = false }: ServicesGrid
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
-            <div
+            <Link
               key={service.title}
-              className="group bg-card rounded-none overflow-hidden border border-border hover:shadow-lg transition"
+              href={service.href}
+              className="group block bg-card rounded-none overflow-hidden border border-border hover:shadow-lg transition"
             >
               <div className="relative h-52 overflow-hidden">
                 <Image
@@ -55,7 +56,7 @@ export default function ServicesGrid({ showViewAllButton = false }: ServicesGrid
                   →
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
