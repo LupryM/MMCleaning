@@ -10,7 +10,7 @@ export default function Footer() {
             Ready for a spotless home? Let&apos;s get in touch.
           </h3>
           <Link
-            href="/contact"
+            href="/#contact"
             className="group inline-flex items-center gap-2 bg-dark text-background px-8 py-4 font-semibold hover:bg-dark/90 transition whitespace-nowrap"
           >
             Contact Us
@@ -46,13 +46,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="hover:text-lime transition">
+                <Link href="/#about" className="hover:text-lime transition">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#gallery" className="hover:text-lime transition">
-                  Gallery
+                <Link href="/#areas" className="hover:text-lime transition">
+                  Service Areas
                 </Link>
               </li>
             </ul>
