@@ -136,6 +136,31 @@ export default function DeepCleaningPage() {
 
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-8 lg:py-28"><p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">Good to know</p><h2 className="mt-3 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">Deep cleaning FAQs</h2><div className="mt-10 divide-y divide-border border-y border-border">{faqs.map(([question, answer]) => <details key={question} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-bold [&::-webkit-details-marker]:hidden"><span>{question}</span><span className="text-2xl font-normal text-lime transition group-open:rotate-45">+</span></summary><p className="max-w-2xl pt-4 leading-7 text-muted-foreground">{answer}</p></details>)}</div></section>
 
+      <section className="bg-cream" aria-labelledby="other-services-heading">
+        <div className="mx-auto max-w-[1600px] px-4 py-20 sm:px-8 lg:px-12 lg:py-24">
+          <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">More ways we can help</p>
+              <h2 id="other-services-heading" className="mt-3 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">Other services we <span className="text-lime">offer.</span></h2>
+            </div>
+            <Link href="/services" className="font-bold transition hover:text-lime">View all services <span className="ml-2 text-lime">→</span></Link>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              ["Move-in cleaning", "/services/move-in-cleaning", "Start fresh in a home that is ready for you."],
+              ["Move-out cleaning", "/services/move-out-cleaning", "Leave your space looking its absolute best."],
+              ["Apartment cleaning", "/services/apartment-cleaning", "Reliable cleaning tailored to apartment living."],
+              ["Commercial cleaning", "/services/commercial-cleaning", "A clean, professional space for your team and customers."],
+            ].map(([title, href, description]) => (
+              <Link key={title} href={href} className="group flex min-h-48 flex-col justify-between border border-border bg-background p-6 transition hover:-translate-y-1 hover:border-lime hover:shadow-lg">
+                <div><h3 className="text-xl font-extrabold">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p></div>
+                <span className="mt-8 flex items-center justify-between border-t border-border pt-4 text-sm font-bold">Explore service <span className="text-xl text-lime transition group-hover:translate-x-1">→</span></span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <Footer />
       <WhatsappButton />
     </main>
