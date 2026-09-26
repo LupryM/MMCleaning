@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
+import ServicesGrid from "@/components/services-grid";
+import ServiceGallery from "@/components/service-gallery";
 import Footer from "@/components/footer";
 import WhatsappButton from "@/components/whatsapp-button";
 import Sparkle from "@/components/sparkle";
@@ -117,16 +119,13 @@ export default function DeepCleaningPage() {
             </div>
             <p className="max-w-sm text-sm leading-6 text-muted-foreground">Thoughtful detail, fresh surfaces and a finish you can see the moment you walk in.</p>
           </div>
-          <div className="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
-            <div className="relative min-h-[360px] overflow-hidden bg-dark md:min-h-[520px]">
-              <Image src="/Service Images/Deep-Cleaning-Company.jpg" alt="MM Cleaners team completing a deep clean" fill className="object-cover transition duration-500 hover:scale-105" sizes="(max-width: 768px) 100vw, 60vw" />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-dark/70 to-transparent p-6 pt-20 text-background sm:p-8 sm:pt-24"><p className="text-sm font-semibold text-background/75">Detail from top to bottom</p><p className="mt-1 text-2xl font-extrabold">Fresh feels good.</p></div>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
-              <div className="relative min-h-[220px] overflow-hidden bg-dark sm:min-h-[250px]"><Image src="/Service Images/apartment clean.jpg" alt="Freshly cleaned apartment interior" fill className="object-cover transition duration-500 hover:scale-105" sizes="(max-width: 768px) 50vw, 40vw" /></div>
-              <div className="relative min-h-[220px] overflow-hidden bg-dark sm:min-h-[250px]"><Image src="/Service Images/Move in cleaning.jpg" alt="Professional move-in cleaning service" fill className="object-cover transition duration-500 hover:scale-105" sizes="(max-width: 768px) 50vw, 40vw" /></div>
-            </div>
-          </div>
+          <ServiceGallery
+            images={[
+              { src: "/Service Images/Deep-Cleaning-Company.jpg", alt: "MM Cleaners team completing a deep clean", caption: "Fresh feels good.", subcaption: "Detail from top to bottom" },
+              { src: "/Service Images/deep cleaning 2.webp", alt: "Professional deep cleaning detail" },
+              { src: "/Service Images/deep cleaning 3.jpg", alt: "Deep cleaning result" },
+            ]}
+          />
         </div>
       </section>
 
@@ -136,36 +135,13 @@ export default function DeepCleaningPage() {
 
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-8 lg:py-28"><p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">Good to know</p><h2 className="mt-3 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">Deep cleaning FAQs</h2><div className="mt-10 divide-y divide-border border-y border-border">{faqs.map(([question, answer]) => <details key={question} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-bold [&::-webkit-details-marker]:hidden"><span>{question}</span><span className="text-2xl font-normal text-lime transition group-open:rotate-45">+</span></summary><p className="max-w-2xl pt-4 leading-7 text-muted-foreground">{answer}</p></details>)}</div></section>
 
-      <section className="bg-cream" aria-labelledby="other-services-heading">
-        <div className="mx-auto max-w-[1600px] px-4 py-20 sm:px-8 lg:px-12 lg:py-24">
-          <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">More ways we can help</p>
-              <h2 id="other-services-heading" className="mt-3 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">Other services we <span className="text-lime">offer.</span></h2>
-            </div>
-            <Link href="/services" className="font-bold transition hover:text-lime">View all services <span className="ml-2 text-lime">→</span></Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              ["Move-in/out cleaning", "/services/move-in-move-out-cleaning", "Start fresh in a home that is ready for you.", "/Service Images/Move in cleaning.jpg"],
-              ["Post-construction", "/services/post-construction-cleaning", "Thorough cleaning after building or renovation work.", "/Service Images/post construction cleaning.avif"],
-              ["Apartment cleaning", "/services/apartment-cleaning", "Reliable cleaning tailored to apartment living.", "/Service Images/apartment clean.jpg"],
-              ["Commercial cleaning", "/services/commercial-cleaning", "A clean, professional space for your team and customers.", "/Service Images/Office Cleaning.jpg"],
-            ].map(([title, href, description, image]) => (
-              <Link key={title} href={href} className="group overflow-hidden border border-border bg-background transition hover:-translate-y-1 hover:border-lime hover:shadow-lg">
-                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                  <Image src={image} alt="" fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
-                </div>
-                <div className="flex min-h-48 flex-col justify-between p-6">
-                  <div><h3 className="text-xl font-extrabold">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p></div>
-                  <span className="mt-8 flex items-center justify-between border-t border-border pt-4 text-sm font-bold">Explore service <span className="text-xl text-lime transition group-hover:translate-x-1">→</span></span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
+            <ServicesGrid 
+        showViewAllButton={true}
+        badge="More ways we can help"
+        title="Other services we offer."
+        subtitle=""
+        exclude="/services/deep-cleaning"
+      />
       <Footer />
       <WhatsappButton />
     </main>

@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function AdditionalServices() {
   const services = [
-    { title: "Carpet Cleaning" },
-    { title: "Upholstery Cleaning" },
-    { title: "Mattress Cleaning" },
+    { title: "Carpet Cleaning", image: "/Service Images/carpet cleaning.jpg" },
+    { title: "Upholstery Cleaning", image: "/Service Images/upholstery-cleaning.jpeg" },
+    { title: "Mattress Cleaning", image: "/placeholder.svg?height=176&width=420&query=Mattress+Cleaning" },
   ];
 
   return (
@@ -27,9 +27,7 @@ export default function AdditionalServices() {
             >
               <div className="relative h-44 overflow-hidden">
                 <Image
-                  src={`/placeholder.svg?height=176&width=420&query=${encodeURIComponent(
-                    service.title
-                  )}`}
+                  src={service.image}
                   alt={service.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

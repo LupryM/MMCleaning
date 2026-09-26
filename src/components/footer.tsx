@@ -10,7 +10,7 @@ export default function Footer() {
             Ready for a spotless home? Let&apos;s get in touch.
           </h3>
           <Link
-            href="/#contact"
+            href="/contact"
             className="group inline-flex items-center gap-2 bg-dark text-background px-8 py-4 font-semibold hover:bg-dark/90 transition whitespace-nowrap"
           >
             Contact Us
@@ -25,50 +25,55 @@ export default function Footer() {
         className="relative overflow-hidden bg-dark text-background/70"
       >
       <Sparkle className="pointer-events-none absolute -left-10 top-10 w-40 h-40 text-lime/10" />
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12 border-b border-background/10 pb-12">
-          <div className="max-w-sm">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-10 border-b border-background/10 pb-10">
+          {/* Brand & Description */}
+          <div className="lg:col-span-4">
             <div className="flex items-center gap-1.5 text-background font-heading font-extrabold text-2xl tracking-tight">
               MM Cleaners
               <Sparkle className="w-4 h-4 text-lime" />
             </div>
-            <p className="mt-4 text-sm leading-relaxed">
+            <p className="mt-4 text-sm leading-relaxed text-background/80 pr-4">
               Professional house cleaning services based in Centurion, dedicated
               to making your home shine.
             </p>
-            <ul className="mt-6 flex flex-wrap gap-4 text-sm">
-              <li>
-                <Link
-                  href="/services"
-                  className="hover:text-lime transition"
-                >
-                  Our Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/#about" className="hover:text-lime transition">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/#areas" className="hover:text-lime transition">
-                  Service Areas
-                </Link>
-              </li>
+          </div>
+
+          {/* Quick Links */}
+          <div className="lg:col-span-2">
+            <h4 className="text-background font-heading font-bold text-lg mb-3">Company</h4>
+            <ul className="flex flex-col gap-2 text-sm text-background/80">
+              <li><Link href="/" className="hover:text-lime transition">Home</Link></li>
+              <li><Link href="/about" className="hover:text-lime transition">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-lime transition">Contact</Link></li>
+              <li><Link href="/#areas" className="hover:text-lime transition">Service Areas</Link></li>
             </ul>
           </div>
 
-          <div className="lg:text-right">
-            <h3 className="text-background font-heading font-extrabold text-3xl md:text-4xl tracking-tight">
-              Contact us
-            </h3>
-            <div className="mt-6 flex flex-col gap-3 lg:items-end">
+          {/* Services Links */}
+          <div className="lg:col-span-3">
+            <h4 className="text-background font-heading font-bold text-lg mb-3">Our Services</h4>
+            <ul className="flex flex-col gap-2 text-sm text-background/80">
+              <li><Link href="/services/apartment-cleaning" className="hover:text-lime transition">Apartment Cleaning</Link></li>
+              <li><Link href="/services/carpet-cleaning" className="hover:text-lime transition">Carpet Cleaning</Link></li>
+              <li><Link href="/services/commercial-cleaning" className="hover:text-lime transition">Commercial Cleaning</Link></li>
+              <li><Link href="/services/deep-cleaning" className="hover:text-lime transition">Deep Cleaning</Link></li>
+              <li><Link href="/services/move-in-move-out-cleaning" className="hover:text-lime transition">Move In/Out Cleaning</Link></li>
+              <li><Link href="/services/post-construction-cleaning" className="hover:text-lime transition">Post Construction Cleaning</Link></li>
+              <li><Link href="/services/upholstery-cleaning" className="hover:text-lime transition">Upholstery Cleaning</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact us */}
+          <div className="lg:col-span-3">
+            <h4 className="text-background font-heading font-bold text-lg mb-3">Contact Us</h4>
+            <div className="flex flex-col gap-3 text-sm text-background/80">
               <a
                 href="tel:+27783928061"
-                className="group inline-flex items-center gap-3 text-background hover:text-lime transition"
+                className="group inline-flex items-center gap-3 hover:text-lime transition"
               >
                 <svg
-                  className="w-6 h-6 text-lime shrink-0 group-hover:scale-110 transition-transform"
+                  className="w-5 h-5 text-lime shrink-0 group-hover:scale-110 transition-transform"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -76,9 +81,9 @@ export default function Footer() {
                 </svg>
                 +27 78 392 8061
               </a>
-              <span className="group inline-flex items-center gap-3 lg:justify-end text-background hover:text-lime transition">
+              <span className="group inline-flex items-center gap-3 hover:text-lime transition">
                 <svg
-                  className="w-6 h-6 text-lime shrink-0 group-hover:scale-110 transition-transform"
+                  className="w-5 h-5 text-lime shrink-0 group-hover:scale-110 transition-transform"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

@@ -26,6 +26,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Favicon – all devices */}
+        <link rel="icon" href="/logo/favicon (2).png" type="image/png" sizes="any" />
+        <link rel="apple-touch-icon" href="/logo/favicon (2).png" />
+        <meta name="theme-color" content="#ffffff" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"

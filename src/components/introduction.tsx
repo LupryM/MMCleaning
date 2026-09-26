@@ -16,20 +16,18 @@ export default function Introduction() {
               Built on honest, hardworking values
             </h2>
             
-            <div className="mt-8 flex flex-wrap gap-2.5">
-              {["Family Owned", "Centurion Based", "Managed by Sisters", "Trained Staff"].map(
-                (tag) => (
-                  <span
-                    key={tag}
-                    className="bg-cream text-foreground px-3.5 py-1.5 rounded-none text-xs font-semibold uppercase tracking-wide border border-border"
-                  >
-                    {tag}
-                  </span>
-                )
-              )}
-            </div>
 
-            <div className="mt-8 sm:mt-10">
+
+          </div>
+
+          <div className="lg:col-span-7 bg-cream p-6 sm:p-8 md:p-10 border border-border relative flex flex-col justify-center">
+            <Sparkle className="absolute top-6 right-6 w-5 h-5 text-lime" />
+            
+            <p className="text-base sm:text-lg text-foreground font-medium leading-relaxed">
+              MM Cleaners is a family-owned business based in Centurion, managed directly by two sisters. When we built this company, we didn&apos;t look far for our business model. We built it around the standards of our grandmother, Angie.
+            </p>
+            
+            <div className="mt-8">
               <Link
                 href="/about"
                 className="group inline-flex items-center gap-2 bg-foreground text-background pl-6 pr-4 py-3.5 rounded-none font-semibold hover:bg-foreground/90 transition text-sm"
@@ -40,27 +38,6 @@ export default function Introduction() {
                 </span>
               </Link>
             </div>
-          </div>
-
-          {/* Right Column: Story Text */}
-          <div className="lg:col-span-7 bg-cream p-6 sm:p-8 md:p-10 border border-border relative">
-            <Sparkle className="absolute top-6 right-6 w-5 h-5 text-lime" />
-            
-            <p className="text-base sm:text-lg text-foreground font-medium leading-relaxed">
-              MM Cleaners is a family-owned business based in Centurion, managed directly by two sisters. When we built this company, we didn&apos;t look far for our business model. We built it around the standards of our grandmother, Angie.
-            </p>
-            
-            <div className="my-6 border-t border-border/60" />
-            
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Angie didn&apos;t believe in shortcuts. She was practical, hardworking, and knew that doing a job right the first time meant paying attention to the details most people ignore. She passed that no-nonsense approach down to her daughters.
-            </p>
-            
-            <div className="my-6 border-t border-border/60" />
-            
-            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Today, that is exactly how we operate. We aren&apos;t a massive, faceless franchise. We are a local team that values reliability, efficiency, and honest work. We train our staff rigorously and oversee the work to make sure it hits the mark. When you hire us, you get a crew that shows up on time, works hard, and leaves your space genuinely clean.
-            </p>
           </div>
 
         </div>

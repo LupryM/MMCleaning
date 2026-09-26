@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/navbar";
+import ServicesGrid from "@/components/services-grid";
 import Footer from "@/components/footer";
 import WhatsappButton from "@/components/whatsapp-button";
 import Sparkle from "@/components/sparkle";
@@ -58,7 +59,7 @@ export default function UpholsteryCleaningPage() {
             </div>
           </div>
           <div className="relative min-h-[440px] overflow-hidden bg-dark sm:min-h-[560px]">
-            <Image src="/placeholder.svg?height=1000&width=800&query=upholstery+cleaning" alt="Professional upholstery cleaning" fill priority className="object-cover" sizes="(max-width: 1024px) 100vw, 55vw" />
+            <Image src="/Service Images/upholstery-cleaning.jpeg" alt="Professional upholstery cleaning" fill priority className="object-cover" sizes="(max-width: 1024px) 100vw, 55vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark/65 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-6 text-background sm:p-8">
               <div><p className="text-sm font-semibold text-background/70">MM Cleaners</p><p className="mt-1 text-2xl font-extrabold">Since 2008.</p></div>
@@ -102,36 +103,13 @@ export default function UpholsteryCleaningPage() {
 
       <section className="mx-auto max-w-3xl px-4 py-20 sm:px-8 lg:py-28"><p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">Good to know</p><h2 className="mt-3 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">Frequently Asked Questions</h2><div className="mt-10 divide-y divide-border border-y border-border">{faqs.map(([question, answer]) => <details key={question} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-lg font-bold [&::-webkit-details-marker]:hidden"><span>{question}</span><span className="text-2xl font-normal text-lime transition group-open:rotate-45">+</span></summary><p className="max-w-2xl pt-4 leading-7 text-muted-foreground">{answer}</p></details>)}</div></section>
 
-      <section className="bg-cream" aria-labelledby="other-services-heading">
-        <div className="mx-auto max-w-[1600px] px-4 py-20 sm:px-8 lg:px-12 lg:py-24">
-          <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">More ways we can help</p>
-              <h2 id="other-services-heading" className="mt-3 text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">Other services we <span className="text-lime">offer.</span></h2>
-            </div>
-            <Link href="/services" className="font-bold transition hover:text-lime">View all services <span className="ml-2 text-lime">→</span></Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              ["Deep cleaning", "/services/deep-cleaning", "A complete reset for your home.", "/Service Images/Deep-Cleaning-Company.jpg"],
-              ["Move-in/out cleaning", "/services/move-in-move-out-cleaning", "Start fresh in a home that is ready for you.", "/Service Images/Move in cleaning.jpg"],
-              ["Post-construction", "/services/post-construction-cleaning", "Thorough cleaning after building or renovation work.", "/Service Images/post construction cleaning.avif"],
-              ["Commercial cleaning", "/services/commercial-cleaning", "A clean, professional space for your team and customers.", "/Service Images/Office Cleaning.jpg"],
-            ].map(([title, href, description, image]) => (
-              <Link key={title} href={href} className="group overflow-hidden border border-border bg-background transition hover:-translate-y-1 hover:border-lime hover:shadow-lg">
-                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                  <Image src={image} alt="" fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
-                </div>
-                <div className="flex min-h-48 flex-col justify-between p-6">
-                  <div><h3 className="text-xl font-extrabold">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p></div>
-                  <span className="mt-8 flex items-center justify-between border-t border-border pt-4 text-sm font-bold">Explore service <span className="text-xl text-lime transition group-hover:translate-x-1">→</span></span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
+            <ServicesGrid 
+        showViewAllButton={true}
+        badge="More ways we can help"
+        title="Other services we offer."
+        subtitle=""
+        exclude="/services/upholstery-cleaning"
+      />
       <Footer />
       <WhatsappButton />
     </main>

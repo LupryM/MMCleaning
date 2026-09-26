@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/navbar";
 import ServicesGrid from "@/components/services-grid";
-import AdditionalServices from "@/components/additional-services";
 import Footer from "@/components/footer";
 import WhatsappButton from "@/components/whatsapp-button";
 
@@ -29,7 +28,6 @@ export default function ServicesPage() {
       </section>
 
       <ServicesGrid showViewAllButton={false} />
-      <AdditionalServices />
       <Footer />
       <WhatsappButton />
     </main>
