@@ -137,15 +137,24 @@ export default function Navbar() {
               
               {/* Services Dropdown */}
               <div>
-                <button 
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className={`w-full text-left px-6 py-5 border-b border-white/10 text-lg font-heading font-bold uppercase tracking-wide transition flex justify-between items-center ${isActive("/services") ? "text-lime bg-white/5" : "hover:text-lime hover:bg-white/5"}`}
-                >
-                  Our Services
-                  <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
+                <div className={`flex justify-between items-center border-b border-white/10 ${isActive("/services") ? "bg-white/5" : ""}`}>
+                  <Link
+                    href="/services"
+                    onClick={() => setMenuOpen(false)}
+                    className={`flex-1 px-6 py-5 text-lg font-heading font-bold uppercase tracking-wide transition ${isActive("/services") ? "text-lime" : "hover:text-lime hover:bg-white/5"}`}
+                  >
+                    Our Services
+                  </Link>
+                  <button
+                    onClick={() => setServicesOpen(!servicesOpen)}
+                    className={`px-5 py-5 transition hover:text-lime hover:bg-white/5 ${isActive("/services") ? "text-lime" : ""}`}
+                    aria-label="Toggle services dropdown"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </div>
                 
                 {/* Services Expanded */}
                 <div className={`flex flex-col overflow-hidden transition-all duration-300 bg-black/20 ${servicesOpen ? "max-h-[600px]" : "max-h-0"}`}>

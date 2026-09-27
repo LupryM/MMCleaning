@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import Sparkle from "@/components/sparkle";
 import WhatsappButton from "@/components/whatsapp-button";
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Contact Us | MM Cleaners",
@@ -15,13 +16,23 @@ export default function ContactPage() {
       <Navbar />
       
       {/* Header Section */}
-      <section className="relative bg-foreground text-background py-20 px-4 md:px-8 overflow-hidden">
-        {/* Geometric decorations */}
+      <section className="relative h-[380px] md:h-[460px] flex items-center justify-center overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="/Service Images/Deep-Cleaning-Company.jpg"
+          alt="Professional cleaning team at work"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-foreground/75" />
+        {/* Geometric decoration */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-24 -right-24 w-[30rem] h-[30rem] bg-lime/10 rotate-12 transform"
         />
-        <div className="relative max-w-[1600px] mx-auto text-center">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-4 md:px-8 text-center">
           <span className="inline-flex items-center gap-2 bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-none mb-6">
             Get In Touch
           </span>
@@ -29,7 +40,7 @@ export default function ContactPage() {
             Contact <span className="text-lime">Us</span>
           </h1>
           <p className="text-background/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            Ready to experience a spotless home? Send us a message and we'll get back to you as soon as possible.
+            Ready to experience a spotless home? Send us a message and we&apos;ll get back to you as soon as possible.
           </p>
         </div>
       </section>

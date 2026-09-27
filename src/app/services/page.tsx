@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import ServicesGrid from "@/components/services-grid";
 import Footer from "@/components/footer";
 import WhatsappButton from "@/components/whatsapp-button";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Our Services | MM Cleaners - Professional Cleaning in Centurion",
@@ -16,8 +17,19 @@ export default function ServicesPage() {
       <Navbar />
       
       {/* Services Page Hero */}
-      <section className="bg-foreground text-background pt-36 pb-20">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 text-center">
+      <section className="relative h-[420px] md:h-[520px] flex items-center justify-center overflow-hidden">
+        {/* Background image */}
+        <Image
+          src="/services header.webp"
+          alt="Professional cleaning services"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-foreground/70" />
+        {/* Content */}
+        <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 text-center">
           <h1 className="text-background font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6">
             Professional Cleaning <span className="text-lime">Services</span>
           </h1>

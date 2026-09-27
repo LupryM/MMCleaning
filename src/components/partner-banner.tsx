@@ -31,20 +31,20 @@ export default function PartnerBanner() {
                   Also compatible with
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="relative w-24 h-10 bg-white flex items-center justify-center p-2">
+                  <div className="relative w-28 h-12 bg-white rounded-md flex items-center justify-center overflow-hidden">
                     <Image
-                      src="/Images/Logo_airbnb.png"
+                      src="/Images/Logo_airbnb-removebg-preview.png"
                       alt="Airbnb"
                       fill
-                      className="object-contain p-1"
+                      className="object-contain scale-[1.3]"
                     />
                   </div>
-                  <div className="relative w-32 h-10 bg-white flex items-center justify-center p-2">
+                  <div className="relative w-36 h-12 bg-white rounded-md flex items-center justify-center overflow-hidden">
                     <Image
-                      src="/Images/kisspng-booking-com-hotel-logo-discounts-and-allowances-ro-booking-com-hunter-mason-5c88a13ddbf9c1.296745251552458045901.jpg"
+                      src="/Images/kisspng-booking-com-hotel-logo-discounts-and-allowances-ro-booking-com-hunter-mason-5c88a13ddbf9c1.296745251552458045901-removebg-preview.png"
                       alt="Booking.com"
                       fill
-                      className="object-contain p-1"
+                      className="object-contain p-2 translate-y-[3px]"
                     />
                   </div>
                 </div>

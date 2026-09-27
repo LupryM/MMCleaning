@@ -23,7 +23,7 @@ export default function TrustReviews() {
             <div className="text-center">
               <div className="relative w-72 h-24 mx-auto mb-2">
                 <Image
-                  src="/Images/oogle-review-logo-png-google-reviews-transparent-1156292055272f0fh5jor.png"
+                  src="/Images/oogle-review-logo-png-google-reviews-transparent-1156292055272f0fh5jor-removebg-preview.png"
                   alt="Google Reviews"
                   fill
                   className="object-contain"
