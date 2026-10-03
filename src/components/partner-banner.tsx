@@ -36,7 +36,7 @@ export default function PartnerBanner() {
                       src="/Images/Logo_airbnb-removebg-preview.png"
                       alt="Airbnb"
                       fill
-                      className="object-contain scale-[1.3]"
+                      className="object-contain p-2"
                     />
                   </div>
                   <div className="relative w-36 h-12 bg-white rounded-md flex items-center justify-center overflow-hidden">
