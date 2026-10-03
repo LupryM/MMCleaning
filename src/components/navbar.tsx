@@ -44,7 +44,7 @@ export default function Navbar() {
             <Link href="/" className="flex items-center">
               <Image
                 src="/logo/header logo.png"
-                alt="MM Cleaners"
+                alt="Angie's Cleaning"
                 width={280}
                 height={90}
                 className="h-16 w-auto object-contain"

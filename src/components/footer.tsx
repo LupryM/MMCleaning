@@ -30,7 +30,7 @@ export default function Footer() {
           {/* Brand & Description */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-1.5 text-background font-heading font-extrabold text-2xl tracking-tight">
-              MM Cleaners
+              Angie's Cleaning
               <Sparkle className="w-4 h-4 text-lime" />
             </div>
             <p className="mt-4 text-sm leading-relaxed text-background/80 pr-4">
@@ -108,7 +108,7 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
           <p>
-            &copy; {new Date().getFullYear()} MM Cleaners. All rights reserved.
+            &copy; {new Date().getFullYear()} Angie's Cleaning. All rights reserved.
           </p>
           <a
             href="#"

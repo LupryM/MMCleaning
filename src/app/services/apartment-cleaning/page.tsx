@@ -9,9 +9,9 @@ import WhatsappButton from "@/components/whatsapp-button";
 import Sparkle from "@/components/sparkle";
 
 export const metadata: Metadata = {
-  title: "Apartment Cleaning Services in Centurion | MM Cleaners",
+  title: "Apartment Cleaning Services in Centurion | Angie's Cleaning",
   description:
-    "Keep your apartment spotless with MM Cleaners. We provide reliable and thorough apartment cleaning services in Centurion.",
+    "Keep your apartment spotless with Angie's Cleaning. We provide reliable and thorough apartment cleaning services in Centurion.",
 };
 
 const rooms = [
@@ -83,7 +83,7 @@ export default function ApartmentCleaningPage() {
             <Image src="/Service Images/apartment clean.jpg" alt="Professional apartment cleaning" fill priority className="object-cover" sizes="(max-width: 1024px) 100vw, 55vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark/65 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-6 text-background sm:p-8">
-              <div><p className="text-sm font-semibold text-background/70">MM Cleaners</p><p className="mt-1 text-2xl font-extrabold">Cozy & Clean.</p></div>
+              <div><p className="text-sm font-semibold text-background/70">Angie's Cleaning</p><p className="mt-1 text-2xl font-extrabold">Cozy & Clean.</p></div>
               <Sparkle className="h-12 w-12 text-lime" />
             </div>
           </div>
@@ -114,14 +114,14 @@ export default function ApartmentCleaningPage() {
         <div className="mx-auto max-w-[1600px] px-4 py-20 sm:px-8 lg:px-12 lg:py-28">
           <div className="mb-12 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">The MM Cleaners finish</p>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">The Angie's Cleaning finish</p>
               <h2 id="gallery-heading" className="mt-3 max-w-2xl text-4xl font-extrabold tracking-[-0.04em] sm:text-5xl">A closer look at <span className="text-lime">properly clean.</span></h2>
             </div>
             <p className="max-w-sm text-sm leading-6 text-muted-foreground">Thoughtful detail, fresh surfaces and a finish you can see the moment you walk in.</p>
           </div>
           <ServiceGallery
             images={[
-              { src: "/Service Images/apartment clean.jpg", alt: "MM Cleaners team completing an apartment clean", caption: "Cozy & Clean.", subcaption: "Detail from top to bottom" },
+              { src: "/Service Images/apartment clean.jpg", alt: "Angie's Cleaning team completing an apartment clean", caption: "Cozy & Clean.", subcaption: "Detail from top to bottom" },
               { src: "/Service Images/Deep-Cleaning-Company.jpg", alt: "Freshly cleaned apartment interior" },
               { src: "/Service Images/Move in cleaning.jpg", alt: "Professional apartment cleaning service" },
             ]}

@@ -6,9 +6,9 @@ import WhatsappButton from "@/components/whatsapp-button";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Our Services | MM Cleaners - Professional Cleaning in Centurion",
+  title: "Our Services | Angie's Cleaning - Professional Cleaning in Centurion",
   description:
-    "Explore all cleaning services offered by MM Cleaners, including commercial cleaning, deep cleaning, move-in/out cleaning, carpet cleaning, and more in Centurion.",
+    "Explore all cleaning services offered by Angie's Cleaning, including commercial cleaning, deep cleaning, move-in/out cleaning, carpet cleaning, and more in Centurion.",
 };
 
 export default function ServicesPage() {

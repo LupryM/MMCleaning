@@ -6,8 +6,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Contact Us | MM Cleaners",
-  description: "Get in touch with MM Cleaners for professional house cleaning services in Centurion.",
+  title: "Contact Us | Angie's Cleaning",
+  description: "Get in touch with Angie's Cleaning for professional house cleaning services in Centurion.",
 };
 
 export default function ContactPage() {
@@ -157,7 +157,7 @@ export default function ContactPage() {
                 <i className="fa-solid fa-envelope"></i>
               </div>
               <h3 className="font-heading font-extrabold text-foreground mb-2 text-xl">Email Us</h3>
-              <p className="text-muted-foreground text-sm">info@mmcleaners.co.za</p>
+              <p className="text-muted-foreground text-sm">info@angiescleaning.co.za</p>
             </div>
             
             <div className="p-8 bg-card border border-border flex flex-col items-center text-center">

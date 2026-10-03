@@ -8,7 +8,7 @@ import WhatsappButton from "@/components/whatsapp-button";
 import Sparkle from "@/components/sparkle";
 
 export const metadata: Metadata = {
-  title: "Move In & Move Out Cleaning in Centurion | MM Cleaners",
+  title: "Move In & Move Out Cleaning in Centurion | Angie's Cleaning",
   description:
     "Landlord approved deep cleans across Centurion, Pretoria, and Johannesburg, backed by a 72 hour re-clean guarantee. Get a quote.",
 };
@@ -105,7 +105,7 @@ export default function MoveInOutCleaningPage() {
             <Image src="/Service Images/Move in cleaning.jpg" alt="Professional move in, move out cleaning" fill priority className="object-cover" sizes="(max-width: 1024px) 100vw, 55vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark/65 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-6 text-background sm:p-8">
-              <div><p className="text-sm font-semibold text-background/70">MM Cleaners</p><p className="mt-1 text-2xl font-extrabold">Since 2008.</p></div>
+              <div><p className="text-sm font-semibold text-background/70">Angie's Cleaning</p><p className="mt-1 text-2xl font-extrabold">Since 2008.</p></div>
               <Sparkle className="h-12 w-12 text-lime" />
             </div>
           </div>

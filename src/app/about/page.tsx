@@ -4,8 +4,8 @@ import WhatsappButton from "@/components/whatsapp-button";
 import Sparkle from "@/components/sparkle";
 
 export const metadata = {
-  title: "About Us | MM Cleaners",
-  description: "Learn more about MM Cleaners, our family-owned business, and the hardworking values we bring to every clean.",
+  title: "About Us | Angie's Cleaning",
+  description: "Learn more about Angie's Cleaning, our family-owned business, and the hardworking values we bring to every clean.",
 };
 
 export default function AboutPage() {
@@ -33,7 +33,7 @@ export default function AboutPage() {
               
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg sm:text-xl text-foreground font-medium leading-relaxed mb-8">
-                  MM Cleaners is a family-owned business based in Centurion, managed directly by two sisters. When we built this company, we didn&apos;t look far for our business model. We built it around the standards of our grandmother, Angie.
+                  Angie's Cleaning is a family-owned business based in Centurion, managed directly by two sisters. When we built this company, we didn&apos;t look far for our business model. We built it around the standards of our grandmother, Angie.
                 </p>
                 
                 <div className="w-12 h-1 bg-lime mb-8" />
@@ -69,7 +69,7 @@ export default function AboutPage() {
                </div>
                
                {/* Optionally, if an image is provided later you can use next/image here */}
-               {/* <Image src="/about-headshot.jpg" alt="MM Cleaners Founders" fill className="object-cover" /> */}
+               {/* <Image src="/about-headshot.jpg" alt="Angie's Cleaning Founders" fill className="object-cover" /> */}
             </div>
 
           </div>

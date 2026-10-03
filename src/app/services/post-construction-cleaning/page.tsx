@@ -8,7 +8,7 @@ import WhatsappButton from "@/components/whatsapp-button";
 import Sparkle from "@/components/sparkle";
 
 export const metadata: Metadata = {
-  title: "Post Construction Cleaning in Centurion | MM Cleaners",
+  title: "Post Construction Cleaning in Centurion | Angie's Cleaning",
   description:
     "Professional post construction cleaning across Centurion, Pretoria, and Johannesburg. Get your property spotless after renovations.",
 };
@@ -63,7 +63,7 @@ export default function PostConstructionCleaningPage() {
             <Image src="/Service Images/post construction cleaning.avif" alt="Professional post construction cleaning" fill priority className="object-cover" sizes="(max-width: 1024px) 100vw, 55vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark/65 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between p-6 text-background sm:p-8">
-              <div><p className="text-sm font-semibold text-background/70">MM Cleaners</p><p className="mt-1 text-2xl font-extrabold">Since 2008.</p></div>
+              <div><p className="text-sm font-semibold text-background/70">Angie's Cleaning</p><p className="mt-1 text-2xl font-extrabold">Since 2008.</p></div>
               <Sparkle className="h-12 w-12 text-lime" />
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function PostConstructionCleaningPage() {
         <div className="mx-auto max-w-[1600px] px-4 py-20 sm:px-8 lg:px-12 lg:py-28">
           <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
             <div className="max-w-2xl"><p className="text-xl leading-8">Renovating your home can be messy with constructors around. Builders tramp into and out of your property, leaving bags of demolished tiles and dust.</p><p className="mt-6 leading-7 text-muted-foreground">The last step is to clean the property. Cleaning after builders requires professional machines and detergents. We are available to help with the cleaning and getting the property ready to use. Dust covers the property after building or renovating, which can cause health issues, especially if you are allergic or asthmatic.</p><p className="mt-6 leading-7 text-muted-foreground">In a busy home with kids, pets and social gatherings, it is easy for your upholstery to get stained and marked. Replacing furniture and curtains can be costly. We also provide upholstery cleaning services.</p></div>
-            <div><p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">Useful information</p><h2 className="mt-4 text-4xl font-extrabold leading-tight tracking-[-0.04em] sm:text-5xl">Trusted by <span className="text-lime">experts.</span></h2><p className="mt-6 leading-7 text-muted-foreground">Construction companies trust MM Cleaners to carry out a professional post construction cleaning service. Our cleaning technicians are experienced, quick and thorough. A typical post construction cleaning will include a wipe down of all surfaces such as work tops, shelves, skirting boards, vacuuming carpeted areas, and cleaning inside and outside cabinets and drawers.</p></div>
+            <div><p className="text-sm font-bold uppercase tracking-[0.18em] text-muted-foreground">Useful information</p><h2 className="mt-4 text-4xl font-extrabold leading-tight tracking-[-0.04em] sm:text-5xl">Trusted by <span className="text-lime">experts.</span></h2><p className="mt-6 leading-7 text-muted-foreground">Construction companies trust Angie's Cleaning to carry out a professional post construction cleaning service. Our cleaning technicians are experienced, quick and thorough. A typical post construction cleaning will include a wipe down of all surfaces such as work tops, shelves, skirting boards, vacuuming carpeted areas, and cleaning inside and outside cabinets and drawers.</p></div>
           </div>
         </div>
       </section>

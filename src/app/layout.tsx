@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "MM Cleaners | Professional House Cleaning in Centurion",
+  title: "Angie's Cleaning | Professional House Cleaning in Centurion",
   description:
     "Reliable maid and house cleaning services in Centurion. Fast, friendly, and 100% guaranteed. Book your cleaning today!",
 };

@@ -24,7 +24,7 @@ export default function Introduction() {
             <Sparkle className="absolute top-6 right-6 w-5 h-5 text-lime" />
             
             <p className="text-base sm:text-lg text-foreground font-medium leading-relaxed">
-              MM Cleaners is a family-owned business based in Centurion, managed directly by two sisters. When we built this company, we didn&apos;t look far for our business model. We built it around the standards of our grandmother, Angie.
+              Angie's Cleaning is a family-owned business based in Centurion, managed directly by two sisters. When we built this company, we didn&apos;t look far for our business model. We built it around the standards of our grandmother, Angie.
             </p>
             
             <div className="mt-8">
