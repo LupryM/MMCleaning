@@ -15,12 +15,17 @@ export default function TrustReviews() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-sm text-muted-foreground mt-1">
-                4.9/5 based on 120 reviews
+              <p className="text-sm text-muted-foreground mt-1 font-medium">
+                5 Star Reviews on Facebook
               </p>
             </div>
             <div className="hidden md:block w-px h-20 bg-border" />
-            <div className="text-center">
+            <a 
+              href="https://share.google/diYZtA7ApeHxBsIyH" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-center block hover:opacity-80 transition-opacity"
+            >
               <div className="relative w-72 h-24 mx-auto mb-2">
                 <Image
                   src="/Images/oogle-review-logo-png-google-reviews-transparent-1156292055272f0fh5jor-removebg-preview.png"
@@ -29,10 +34,10 @@ export default function TrustReviews() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-sm text-muted-foreground mt-1">
-                4.8/5 based on 85 reviews
+              <p className="text-sm text-muted-foreground mt-1 font-medium">
+                5 Star Reviews on Google
               </p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
