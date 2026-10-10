@@ -32,7 +32,7 @@ export default function ContactForm() {
     if (selectedFile) {
       // 5MB limit
       if (selectedFile.size > 5 * 1024 * 1024) {
-        setFileError("File size must be less than 5MB");
+        setFileError(`File too large: ${(selectedFile.size / (1024 * 1024)).toFixed(2)} MB. Max limit is 5MB.`);
         setFile(null);
         e.target.value = "";
         return;
@@ -43,47 +43,25 @@ export default function ContactForm() {
     }
   };
 
-  const toBase64 = (file: File): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => {
-        if (typeof reader.result === 'string') {
-          // Remove the data URL prefix (e.g., "data:image/jpeg;base64,")
-          const base64Data = reader.result.split(',')[1];
-          resolve(base64Data);
-        } else {
-          reject(new Error("Failed to convert file to base64"));
-        }
-      };
-      reader.onerror = error => reject(error);
-    });
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
     
     try {
-      let attachment = null;
+      const payload = new FormData();
+      payload.append('name', formData.name);
+      payload.append('email', formData.email);
+      payload.append('phone', formData.phone);
+      payload.append('service', formData.service);
+      payload.append('message', formData.message);
       if (file) {
-        const base64Content = await toBase64(file);
-        attachment = {
-          filename: file.name,
-          content: base64Content
-        };
+        payload.append('file', file);
       }
 
       const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          attachment
-        }),
+        body: payload,
       });
 
       const data = await response.json();
@@ -208,7 +186,14 @@ export default function ContactForm() {
             className="w-full px-4 py-3 bg-cream border border-border rounded-none text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent text-foreground file:mr-4 file:py-2 file:px-4 file:rounded-none file:border-0 file:text-sm file:font-semibold file:bg-lime file:text-lime-foreground hover:file:bg-foreground hover:file:text-background transition-colors"
           />
           {fileError && <p className="text-red-500 text-xs mt-1">{fileError}</p>}
-          <p className="text-xs text-muted-foreground mt-1">Max file size: 5MB</p>
+          <div className="flex justify-between items-center text-xs mt-1">
+            <p className="text-muted-foreground">Max file size: 5MB</p>
+            {file && (
+              <p className="text-green-600 dark:text-green-400 font-semibold">
+                Uploaded: {(file.size / (1024 * 1024)).toFixed(2)} MB
+              </p>
+            )}
+          </div>
         </div>
 
         <button 
