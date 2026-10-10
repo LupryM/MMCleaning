@@ -93,9 +93,33 @@ export default function ContactForm() {
       </div>
       
       <form onSubmit={handleSubmit} className="p-8 space-y-6">
-        {submitStatus && (
-          <div className={`p-4 text-sm font-semibold ${submitStatus.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+        {submitStatus?.type === 'error' && (
+          <div className="p-4 text-sm font-semibold bg-red-100 text-red-800">
             {submitStatus.message}
+          </div>
+        )}
+
+        {/* Success Modal */}
+        {submitStatus?.type === 'success' && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm">
+            <div className="bg-card border border-border shadow-2xl p-8 max-w-md w-full relative animate-in fade-in zoom-in duration-300">
+              <div className="w-12 h-12 bg-lime text-lime-foreground flex items-center justify-center mb-6 mx-auto">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-heading font-extrabold text-center mb-2 text-foreground">Message Sent!</h3>
+              <p className="text-center text-muted-foreground mb-6">
+                {submitStatus.message}
+              </p>
+              <button 
+                type="button"
+                onClick={() => setSubmitStatus(null)}
+                className="w-full bg-foreground text-background font-bold py-3 hover:bg-lime hover:text-lime-foreground transition-colors"
+              >
+                Close
+              </button>
+            </div>
           </div>
         )}
       
@@ -109,7 +133,7 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleInputChange}
               className="w-full px-4 py-3 bg-cream border border-border rounded-none text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent text-foreground"
-              placeholder="John Doe"
+              placeholder="Your Name"
               required
             />
           </div>
@@ -122,7 +146,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleInputChange}
               className="w-full px-4 py-3 bg-cream border border-border rounded-none text-sm focus:outline-none focus:ring-2 focus:ring-lime focus:border-transparent text-foreground"
-              placeholder="john@example.com"
+              placeholder="yourname@gmail.com"
               required
             />
           </div>
