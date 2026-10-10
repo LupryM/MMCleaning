@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import WhatsappButton from "@/components/whatsapp-button";
 import Sparkle from "@/components/sparkle";
+import ServicesGrid from "@/components/services-grid";
 
 export const metadata = {
   title: "About Us | Angie's Cleaning",
@@ -76,6 +77,7 @@ export default function AboutPage() {
         </div>
       </section>
       
+      <ServicesGrid showViewAllButton={true} />
       <Footer />
       <WhatsappButton />
     </main>

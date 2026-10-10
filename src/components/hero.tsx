@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Sparkle from "./sparkle";
 
 export default function Hero() {
@@ -38,25 +39,27 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-background">
-      {/* sharp geometric cream backdrop */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -top-32 -left-40 w-[46rem] h-[46rem] bg-cream rotate-12 transform"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-24 right-0 w-[38rem] h-[38rem] bg-cream/70 -rotate-6 transform"
-      />
+    <section className="relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/Images/hero image angies cleaning best cleaners in centurion.jpg"
+          alt="Angie's Cleaning Centurion"
+          fill
+          className="object-cover object-[50%_75%]"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
 
-      <div className="relative max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-16 md:py-24">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
-            <span className="inline-flex items-center gap-2 bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-none">
+            <span className="inline-flex items-center gap-2 bg-lime text-lime-foreground text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded-none shadow-sm">
               Welcome — Centurion&apos;s cleaners
             </span>
 
-            <h1 className="mt-6 font-heading font-extrabold leading-[0.95] tracking-tight text-5xl md:text-6xl lg:text-7xl text-balance">
+            <h1 className="mt-6 font-heading font-extrabold leading-[0.95] tracking-tight text-5xl md:text-6xl lg:text-7xl text-balance text-white">
               Professional House{" "}
               <span className="relative inline-block">
                 Cleaning
@@ -65,7 +68,7 @@ export default function Hero() {
               in Centurion
             </h1>
 
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
+            <p className="mt-6 text-lg text-white/90 max-w-xl leading-relaxed">
               We specialize in house cleaning services in Centurion and
               surrounding areas, dedicated to giving you fast, friendly, and
               reliable service.
@@ -77,7 +80,7 @@ export default function Hero() {
             <Sparkle
               className="hidden lg:block absolute -top-8 -left-6 w-10 h-10 text-lime"
             />
-            <div className="relative bg-card rounded-none shadow-xl border border-border overflow-hidden">
+            <div className="relative bg-card rounded-none shadow-xl overflow-hidden">
               <div className="bg-foreground px-7 py-6">
                 <h2 className="text-background text-2xl font-extrabold font-heading">
                   Request a quote

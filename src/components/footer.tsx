@@ -107,8 +107,11 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
-          <p>
+          <p className="text-center sm:text-left">
             &copy; {new Date().getFullYear()} Angie's Cleaning. All rights reserved.
+            <span className="hidden sm:inline"> | </span>
+            <br className="sm:hidden" />
+            Website designed by <a href="https://www.lmwebdesign.co.za/" target="_blank" rel="noopener noreferrer" className="hover:text-lime transition underline underline-offset-2">LM Web Design</a>
           </p>
           <a
             href="#"
