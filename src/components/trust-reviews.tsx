@@ -12,6 +12,7 @@ export default function TrustReviews() {
                   src="/Images/Facebook-reviews.jpg"
                   alt="Facebook Reviews"
                   fill
+                  sizes="288px"
                   className="object-contain"
                 />
               </div>
@@ -31,6 +32,7 @@ export default function TrustReviews() {
                   src="/Images/oogle-review-logo-png-google-reviews-transparent-1156292055272f0fh5jor-removebg-preview.png"
                   alt="Google Reviews"
                   fill
+                  sizes="288px"
                   className="object-contain"
                 />
               </div>

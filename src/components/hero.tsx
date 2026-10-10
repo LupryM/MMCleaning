@@ -13,7 +13,8 @@ export default function Hero() {
     setIsSubmitting(true);
     setSubmitStatus(null);
     
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
     
     try {
@@ -23,16 +24,23 @@ export default function Hero() {
         body: JSON.stringify(payload),
       });
       
-      const data = await response.json();
+      let data;
+      const contentType = response.headers.get("content-type");
+      if (contentType && contentType.indexOf("application/json") !== -1) {
+        data = await response.json();
+      } else {
+        data = { error: `Server error: ${response.status} ${response.statusText}` };
+      }
       
       if (response.ok) {
         setSubmitStatus({ type: 'success', message: 'Quote request sent!' });
-        e.currentTarget.reset();
+        form.reset();
       } else {
         setSubmitStatus({ type: 'error', message: data.error || 'Failed to send quote request.' });
       }
     } catch (err) {
-      setSubmitStatus({ type: 'error', message: 'An unexpected error occurred.' });
+      console.error("Form submission error:", err);
+      setSubmitStatus({ type: 'error', message: 'A network error occurred. Please try again.' });
     } finally {
       setIsSubmitting(false);
     }
@@ -43,7 +51,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/Images/hero image angies cleaning best cleaners in centurion.jpg"
+          src="/Images/hero-image-angies-cleaning-best-cleaners-in-centurion.jpg"
           alt="Angie's Cleaning Centurion"
           fill
           className="object-cover object-[50%_75%]"

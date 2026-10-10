@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     "Reliable maid and house cleaning services in Centurion. Fast, friendly, and 100% guaranteed. Book your cleaning today!",
 };
 
+export const viewport = {
+  themeColor: "#ffffff",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,15 +29,6 @@ export default function RootLayout({
       className={`${poppins.variable} h-full antialiased bg-background`}
       suppressHydrationWarning
     >
-      <head>
-        <meta name="theme-color" content="#ffffff" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
       </body>

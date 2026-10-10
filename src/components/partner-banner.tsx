@@ -36,6 +36,7 @@ export default function PartnerBanner() {
                       src="/Images/Logo_airbnb-removebg-preview.png"
                       alt="Airbnb"
                       fill
+                      sizes="112px"
                       className="object-contain p-2"
                     />
                   </div>
@@ -44,6 +45,7 @@ export default function PartnerBanner() {
                       src="/Images/kisspng-booking-com-hotel-logo-discounts-and-allowances-ro-booking-com-hunter-mason-5c88a13ddbf9c1.296745251552458045901-removebg-preview.png"
                       alt="Booking.com"
                       fill
+                      sizes="144px"
                       className="object-contain p-2 translate-y-[3px]"
                     />
                   </div>
