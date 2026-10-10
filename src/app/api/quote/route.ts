@@ -16,6 +16,7 @@ export async function POST(request: Request) {
       from: 'Quote Request <info@angiescleaningcenturion.co.za>',
       to: 'info@angiescleaningcenturion.co.za',
       replyTo: email,
+      subject: 'New Quote Request',
       text: `New Quote Request
 
 Name: ${fullName}
@@ -28,6 +29,8 @@ Service: ${formattedService}`,
     const userEmailPromise = resend.emails.send({
       from: "Angie's Cleaning <info@angiescleaningcenturion.co.za>",
       to: email,
+      subject: "Your Quote Request - Angie's Cleaning",
+      text: `Dear ${firstName},\n\nThank you for contacting Angie's Cleaning. We have received your request for a quote regarding our ${formattedService} services.\n\nOur team is reviewing your details and will get back to you shortly.\n\nBest regards,\nThe Team at Angie's Cleaning`,
       html: `Dear ${firstName},<br><br>
 Thank you for contacting Angie's Cleaning. We have successfully received your request for a quote regarding our ${formattedService} services.<br><br>
 Our team is currently reviewing your details and will get back to you shortly with a comprehensive estimate.<br><br>
@@ -49,6 +52,7 @@ angiescleaningcenturion.co.za`,
           from: 'Quote Request <onboarding@resend.dev>',
           to: 'info@angiescleaningcenturion.co.za',
           replyTo: email,
+          subject: 'New Quote Request',
           text: `New Quote Request
 
 Name: ${fullName}
