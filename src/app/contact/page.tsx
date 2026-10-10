@@ -61,7 +61,7 @@ export default function ContactPage() {
                 <i className="fa-solid fa-phone"></i>
               </div>
               <h3 className="font-heading font-extrabold text-foreground mb-2 text-xl">Call Us</h3>
-              <p className="text-muted-foreground text-sm">082 123 4567</p>
+              <p className="text-muted-foreground text-sm">064 511 0847</p>
             </div>
             
             <div className="p-8 bg-card border border-border flex flex-col items-center text-center">
