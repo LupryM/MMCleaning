@@ -69,7 +69,7 @@ export default function Footer() {
             <h4 className="text-background font-heading font-bold text-lg mb-3">Contact Us</h4>
             <div className="flex flex-col gap-3 text-sm text-background/80">
               <a
-                href="tel:+27783928061"
+                href="tel:+27645110847"
                 className="group inline-flex items-center gap-3 hover:text-lime transition"
               >
                 <svg
@@ -79,7 +79,7 @@ export default function Footer() {
                 >
                   <path d="M6.6 10.8a15.5 15.5 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z" />
                 </svg>
-                +27 78 392 8061
+                +27 64 511 0847
               </a>
               <span className="group inline-flex items-center gap-3 hover:text-lime transition">
                 <svg
